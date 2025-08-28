@@ -1,11 +1,19 @@
 
 import { test, expect } from '@playwright/test';
 
-test('taulukko: caption + thead/tbody', async ({ page }) => {
-  await page.goto('/table.html');
-  const table = page.locator('main table');
+test('taulukossa on caption + thead + tbody', async ({ page }) => {
+  // Avaa sivu; muuta osoitetta kurssin asetusten mukaan
+  await page.goto('http://localhost:5173');
+
+  const table = page.locator('table');
   await expect(table).toHaveCount(1);
+
   await expect(table.locator('caption')).toHaveCount(1);
-  await expect(table.locator('thead th')).toHaveCountGreaterThan(0);
-  await expect(table.locator('tbody tr')).toHaveCountGreaterThan(0);
+  await expect(table.locator('thead')).toHaveCount(1);
+  await expect(table.locator('tbody')).toHaveCount(1);
+
+  // tbody-rivien määrä > 0
+  const rowCount = await table.locator('tbody tr').count();
+  expect(rowCount).toBeGreaterThan(0);
 });
+
