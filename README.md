@@ -13,20 +13,17 @@ Tavoite: Toteuta kolme sivua ja navigaatio. Käytä **semanttisia elementtejä**
 - Pidä polut suhteellisina (esim. `./assets/...`).
 
 ## Kehitys ja testaus
+Aja komennot yksitellen:
+1. asentaa riippuvuudet täsmälleen package-lock.jsonin mukaan
+npm ci
 
-1. Asenna riippuvuudet:
-   ```bash
-   npm install
-   ```
-2. Aja testit:
-   ```bash
-   npm run test
-   ```
-3. Käynnistä sivut:
-   ```bash
-   npm start
-   ```
-   Avaa selaimessa: http://localhost:5173
+2. varmistaa, että selaimet ovat olemassa (nopea jos jo on aiemmin asennettu)
+npx @playwright/test install
+
+3. ajaa kaikki testit /tests -kansiosta
+npm test
+
+   
 
 > Vinkkejä:
 > - Aja yksittäinen testitiedosto: `npx playwright test tests/form.spec.ts`
