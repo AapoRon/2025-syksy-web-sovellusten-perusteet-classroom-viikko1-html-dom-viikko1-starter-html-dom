@@ -3,7 +3,7 @@ import { test, expect } from '@playwright/test';
 
 test('taulukossa on caption + thead + tbody', async ({ page }) => {
   // Avaa sivu; muuta osoitetta kurssin asetusten mukaan
-  await page.goto('http://localhost:5173');
+  await page.goto('/table.html');
 
   const table = page.locator('table');
   await expect(table).toHaveCount(1);
