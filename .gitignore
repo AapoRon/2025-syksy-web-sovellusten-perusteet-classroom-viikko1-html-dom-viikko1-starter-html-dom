@@ -1,4 +1,12 @@
+# Node & Playwright
+node_modules/
+playwright-report/
+test-results/
+.results/
 
-node_modules
-playwright-report
-.test-results
+# Mac / Windows / muut roskat
+.DS_Store
+
+# Autograding / raportit
+results.json
+score.json
