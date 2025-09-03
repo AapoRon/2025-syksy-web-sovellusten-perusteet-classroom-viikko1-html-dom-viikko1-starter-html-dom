@@ -9,16 +9,43 @@
 </head>
 <body>
   <header>
-    <h1><!-- TODO: Taulukko-sivun H1 --></h1>
+    <h1>Taulukko</h1>
     <nav aria-label="Päävalikko">
-      <!-- TODO: Sama navigaatio kuin muilla sivuilla -->
+      <ul>
+        <li><a href="index.html">Etusivu</a></li>
+        <li><a href="table.html" aria-current="page">Taulukko</a></li>
+        <li><a href="form.html">Lomake</a></li>
+        <li><a href="image.html">Kuva</a></li>
+      </ul>
     </nav>
   </header>
   <main>
-    <!-- TODO: Lisää datataulukko, jossa on caption + thead/tbody -->
+    <table>
+      <caption>Opiskelijat ja pisteet</caption>
+      <thead>
+        <tr>
+          <th>Nimi</th>
+          <th>Pisteet</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Anna</td>
+          <td>15</td>
+        </tr>
+        <tr>
+          <td>Matti</td>
+          <td>18</td>
+        </tr>
+        <tr>
+          <td>Liisa</td>
+          <td>20</td>
+        </tr>
+      </tbody>
+    </table>
   </main>
   <footer>
-    <!-- TODO: Footer -->
+  <small>&copy; 2025 Web-sovellusten perusteet</small>
   </footer>
 </body>
 </html>
